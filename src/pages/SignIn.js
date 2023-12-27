@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import LoginButton from './Login';
 
 
 
@@ -87,6 +88,9 @@ export default function SignIn() {
               Sign In
             </Button>
             </a>
+            
+              <LoginButton/>
+          
           
             <Grid container sx={{alignContent:'center'}}>
               <Grid item xs>
