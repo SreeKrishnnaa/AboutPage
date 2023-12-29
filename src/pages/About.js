@@ -10,6 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
+import LoginButton from './LoginButton';
 
 function DrawerAppBar() {
   return (
@@ -29,12 +30,13 @@ function DrawerAppBar() {
             <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
             </a>
-            <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
+            {/* <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Signup </Button>
             </a>
             <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Signin</Button>
-            </a>
+            </a> */}
+            <LoginButton/>
           </div>
         </Toolbar>
       </AppBar>

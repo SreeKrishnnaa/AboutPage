@@ -17,6 +17,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea } from '@mui/material';
+import LoginButton from './LoginButton';
 
 const steps = [
   {
@@ -58,12 +59,14 @@ function DrawerAppBar() {
             <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">About us</Button>
             </a>
-            <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
+            
+            {/* <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
               <Button color="inherit">Sign Up</Button>
             </a>
-            <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Sign In</Button>
-            </a>
+             <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit">Sign in</Button>
+            </a>  */}
+           <LoginButton/>
           </div>
         </Toolbar>
       </AppBar>

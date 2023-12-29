@@ -1,122 +1,122 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import LoginButton from './Login';
+// import * as React from 'react';
+// import Avatar from '@mui/material/Avatar';
+// import Button from '@mui/material/Button';
+// import CssBaseline from '@mui/material/CssBaseline';
+// import TextField from '@mui/material/TextField';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Checkbox from '@mui/material/Checkbox';
+// import Link from '@mui/material/Link';
+// import Grid from '@mui/material/Grid';
+// import Box from '@mui/material/Box';
+// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+// import Typography from '@mui/material/Typography';
+// import Container from '@mui/material/Container';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import LoginButton from './LoginButton';
 
 
 
-// TODO remove, this demo shouldn't need to reset the theme.
+// // TODO remove, this demo shouldn't need to reset the theme.
 
-const defaultTheme = createTheme();
+// const defaultTheme = createTheme();
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+// export default function SignIn() {
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     const data = new FormData(event.currentTarget);
+//     console.log({
+//       email: data.get('email'),
+//       password: data.get('password'),
+//     });
+//   };
 
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            border:'1px solid blue',
+//   return (
+//     <ThemeProvider theme={defaultTheme}>
+//       <Container component="main" maxWidth="xs">
+//         <CssBaseline />
+//         <Box
+//           sx={{
+//             border:'1px solid blue',
            
-        borderRadius:'8px',
-            padding:'50px',
-            bgcolor: '#CCCCCC',
-            marginTop: 10,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <a href="/main">
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
-            </a>
+//         borderRadius:'8px',
+//             padding:'50px',
+//             bgcolor: '#CCCCCC',
+//             marginTop: 10,
+//             display: 'flex',
+//             flexDirection: 'column',
+//             alignItems: 'center',
+//           }}
+//         >
+//           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+//             <LockOutlinedIcon />
+//           </Avatar>
+//           <Typography component="h1" variant="h5">
+//             Sign in
+//           </Typography>
+//           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+//             <TextField
+//               margin="normal"
+//               required
+//               fullWidth
+//               id="email"
+//               label="Email Address"
+//               name="email"
+//               autoComplete="email"
+//               autoFocus
+//             />
+//             <TextField
+//               margin="normal"
+//               required
+//               fullWidth
+//               name="password"
+//               label="Password"
+//               type="password"
+//               id="password"
+//               autoComplete="current-password"
+//             />
+//             <FormControlLabel
+//               control={<Checkbox value="remember" color="primary" />}
+//               label="Remember me"
+//             />
+//             <a href="/main">
+//             <Button
+//               type="submit"
+//               fullWidth
+//               variant="contained"
+//               sx={{ mt: 3, mb: 2 }}
+//             >
+//               Sign In
+//             </Button>
+//             </a>
             
-              <LoginButton/>
+       
           
           
-            <Grid container sx={{alignContent:'center'}}>
-              <Grid item xs>
+//             <Grid container sx={{alignContent:'center'}}>
+//               <Grid item xs>
                 
-              </Grid>
+//               </Grid>
               
              
             
-            </Grid>
+//             </Grid>
             
-              <Grid item  sx={{alignContent:'center'}}>
-                <Link href="/signup" variant="body2" >
+//               <Grid item  sx={{alignContent:'center'}}>
+//                 <Link href="/signup" variant="body2" >
                  
-                  { "dont have an account? Sign Up "}
-                </Link>
-              </Grid>
-              <Grid item  sx={{alignContent:'center'}}>
-                <Link href="/home" variant="body2" >
+//                   { "dont have an account? Sign Up "}
+//                 </Link>
+//               </Grid>
+//               <Grid item  sx={{alignContent:'center'}}>
+//                 <Link href="/home" variant="body2" >
                  
-                  { "Go to Home"}
-                </Link>
-              </Grid>
-          </Box>
-        </Box>
+//                   { "Go to Home"}
+//                 </Link>
+//               </Grid>
+//           </Box>
+//         </Box>
       
-      </Container>
-    </ThemeProvider>
-  );
-}
+//       </Container>
+//     </ThemeProvider>
+//   );
+// }
