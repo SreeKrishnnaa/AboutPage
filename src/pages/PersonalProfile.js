@@ -21,7 +21,7 @@ export default function PersonalProfile() {
 
    <div>
      <AppBar sx={{ backgroundColor: "#C3073F" }} position="static">
-        <Toolbar>
+        <Toolbar><img src='/op.png'  width="30" height="20"/>&emsp; 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: "left" }}>
             Profile
           </Typography>

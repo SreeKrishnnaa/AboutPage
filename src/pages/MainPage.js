@@ -25,7 +25,7 @@ console.log(currentTime); // output: "7/20/2021, 2:28:15 PM" (will vary dependin
   <Toolbar>
   <img src='/op.png'  width="30" height="20"/>&emsp; 
     <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
-      Welcome to  Hound Vault
+      Welcome to  Hound Vault !!
     </Typography>
     <a style={{color:"white"}} href="/main" ><Button color="inherit">DashBoard</Button></a>
     <a style={{color:"white"}} href="/profile" ><Button color="inherit">profile</Button></a>

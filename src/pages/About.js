@@ -11,39 +11,34 @@ import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import LoginButton from './LoginButton';
-
 function DrawerAppBar() {
   return (
+    
+      <div style={{backgroundColor:"beige"}}>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ backgroundColor: "#C3073F" }} position="static">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Hound Vault
-            </Typography>
-          </IconButton>
-
-          <div>
-            <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Home</Button>
-            </a>
-            <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">About us</Button>
-            </a>
-            {/* <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Signup </Button>
-            </a>
-            <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Signin</Button>
-            </a> */}
-            <LoginButton/>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
+  
+  
+  <AppBar sx={{backgroundColor:"#C3073F"}} position="static">
+    <Toolbar>
+    <img src='/op.png'  width="30" height="20"/>&emsp; 
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
+      Hound Vault
+      </Typography>
+      <a style={{color:"white"}} href="/home" ><Button color="inherit">home</Button></a>
+      
+      <a style={{color:"white"}} href="/about" ><Button color="inherit">about us</Button></a>
+  <LoginButton/>
+    </Toolbar>
+  </AppBar>
+  </Box>
+  
+      </div>
+    
+    );
+  
 }
+
+
 
 function About() {
   return (
@@ -73,7 +68,7 @@ function About() {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <a href="/Signup"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
+              <a href="/home"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
                 Secure Now!
               </Button></a>
             </CardActions>
@@ -97,7 +92,7 @@ function About() {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <a href="/signup"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
+              <a href="/home"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
                 Save Storage.
               </Button></a>
             </CardActions>
@@ -121,7 +116,7 @@ function About() {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <a href="/signup"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
+              <a href="/home"><Button sx={{ backgroundColor: "#950740", color: "white" }} size="small" color="primary">
                 Achieve it
               </Button></a>
             </CardActions>

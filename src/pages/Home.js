@@ -39,47 +39,29 @@ const steps = [
 
 function DrawerAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: "#C3073F" }}>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <img src='/op.png'  width="30" height="20"/>
-        <div >
-        
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Hound Vault
-            </Typography>
-        </div>
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-          
-          
-          </IconButton>
+    <div style={{backgroundColor:"beige"}}>
+  <Box sx={{ flexGrow: 1 }}>
 
-          <div>
-            <a href="/home" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Home</Button>
-            </a>
-            <a href="#apho" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Aphorisms</Button>
-            </a>
-            <a href="#usecase" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Use Cases</Button>
-            </a>
-            <a href="/about" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">About us</Button>
-            </a>
-            
-            {/* <a href="/signup" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Sign Up</Button>
-            </a>
-             <a href="/signin" style={{ textDecoration: 'none', color: 'white' }}>
-              <Button color="inherit">Sign in</Button>
-            </a>  */}
-           <LoginButton/>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
+
+<AppBar sx={{backgroundColor:"#C3073F"}} position="static">
+  <Toolbar>
+  <img src='/op.png'  width="30" height="20"/>&emsp; 
+    <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
+    Hound Vault
+    </Typography>
+    <a style={{color:"white"}} href="/home" ><Button color="inherit">home</Button></a>
+    <a style={{color:"white"}} href="#apho" ><Button color="inherit">aphorisms</Button></a>
+    <a style={{color:"white"}} href="#usecase" ><Button color="inherit">use cases</Button></a>
+    <a style={{color:"white"}} href="/about" ><Button color="inherit">about us</Button></a>
+<LoginButton/>
+  </Toolbar>
+</AppBar>
+</Box>
+
+    </div>
+  
   );
+  
 }
 
 function Extra() {
