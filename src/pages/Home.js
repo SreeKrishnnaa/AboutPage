@@ -9,6 +9,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
+import  Avatar  from "@mui/material/Avatar";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -40,10 +42,16 @@ function DrawerAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "#C3073F" }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <img src='/op.png'  width="30" height="20"/>
+        <div >
+        
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hound Vault
             </Typography>
+        </div>
+          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+          
+          
           </IconButton>
 
           <div>

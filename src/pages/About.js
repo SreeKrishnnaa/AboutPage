@@ -17,6 +17,7 @@ function DrawerAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{ backgroundColor: "#C3073F" }} position="static">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
+          
           <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Hound Vault
