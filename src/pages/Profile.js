@@ -21,11 +21,7 @@ const Profile = () => {
         <Typography>
           <b>Email:</b> {user.email}
         </Typography>
-        {user.phone_number && (
-          <Typography>
-            <b>Phone Number:</b> {user.phone_number}
-          </Typography>
-        )}
+        
       </Paper>
     )
   );

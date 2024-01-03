@@ -18,10 +18,6 @@ authorizationParams={{
 <App />
 
 </Auth0Provider>
-
-
-
-   
   </React.StrictMode>
 );
 

@@ -2,8 +2,7 @@
 import './App.css';
 
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
@@ -27,8 +26,7 @@ function App() {
      <Routes>
 <Route index element={<Home/>}/>
 <Route path='/home' element={<Home/>}/>
-<Route path='/signup' element={<SignUp/>}/>
-<Route path='/signin' element={<SignIn/>}/>
+
 <Route path='/about' element={<About/>}/>
 <Route path='/main' element={<MainPage/>}/>
 <Route path='/profile' element={<PersonalProfile/>}/>
