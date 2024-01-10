@@ -122,8 +122,8 @@ function About() {
             </CardActions>
           </Card>
         </div>
-
-        <p>
+<div style={{padding:"50px"}}>
+<p>
           <h2>Welcome to Hound Vault !</h2>
           <p>We understand the challenges of managing academic materials, and we're here to simplify the process for you.</p>
 
@@ -148,6 +148,9 @@ function About() {
           <p>Ready to experience the convenience of a secure and user-friendly online vault? Sign up now and start organizing your academic journey with Hound Vault.</p>
 
         </p>
+
+</div>
+        
 
         <CardActions>
           <a href="/home"><Button size="small" color="primary">
