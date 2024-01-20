@@ -128,6 +128,7 @@ function Form() {
                 <div key={data._id} style={{ padding: "15px", borderRadius: "8px" }}>
                 <h4>Title: {data.title}</h4>
                 <h5>Name: {data.pdf}</h5>
+                <h5>User ID: {data.userName}</h5>
                 <Button
                   variant="contained"
                   color="primary"
