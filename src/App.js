@@ -9,7 +9,6 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import About from './pages/About';
 import MainPage from './pages/MainPage';
 import PersonalProfile from './pages/PersonalProfile';
-import Trash from './pages/Trash';
 
 
 
@@ -30,7 +29,6 @@ function App() {
 <Route path='/about' element={<About/>}/>
 <Route path='/main' element={<MainPage/>}/>
 <Route path='/profile' element={<PersonalProfile/>}/>
-<Route path='/trash' element={<Trash/>}/>
 
  </Routes>
  </BrowserRouter> 

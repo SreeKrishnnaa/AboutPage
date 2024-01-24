@@ -6,11 +6,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Form from './Form';
-
 export default function MainPage() {
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
   const now = new Date();
   const currentTime = now.toLocaleTimeString();
+  const {user,isAuthenticated} = useAuth0();
+
+
 
   if (!isAuthenticated) {
     // If not authenticated, show a warning to sign in
@@ -40,8 +42,11 @@ export default function MainPage() {
             </Typography>
             <a style={{ color: "white" }} href="/main"><Button color="inherit">DashBoard</Button></a>
             <a style={{ color: "white" }} href="/profile"><Button color="inherit">profile</Button></a>
-            <a style={{ color: "white" }} href="/trash"><Button color="inherit">trash</Button></a>
             <Button color="inherit">{currentTime}</Button>
+
+
+           
+            
           </Toolbar>
         </AppBar>
       </Box>

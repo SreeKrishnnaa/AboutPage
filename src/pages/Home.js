@@ -170,12 +170,22 @@ function Home() {
   const maxSteps = steps.length;
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % maxSteps);
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setActiveStep((prevActiveStep) => (prevActiveStep - 1 + maxSteps) % maxSteps);
   };
+
+  React.useEffect(() => {
+    const interval = setInterval(handleNext, 6000); // Auto-advance every 6 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  // Add a check for undefined or incorrect structure
+  if (!steps || !Array.isArray(steps) || steps.length === 0 || !steps[activeStep]) {
+    return null; // Or some default content if steps are not available
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -227,23 +237,24 @@ function Home() {
               position="static"
               activeStep={activeStep}
               nextButton={
-                <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                <Button size="small" onClick={handleNext}>
                   Next
                   {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                 </Button>
               }
               backButton={
-                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                <Button size="small" onClick={handleBack}>
                   {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
                   Back
                 </Button>
               }
+              interval={500} // Adjust the interval time in milliseconds (e.g., 6000 for 6 seconds)
               sx={{
                 bgcolor: 'white',
                 p: 1,
                 mt: 1,
                 alignSelf: 'center',
-                borderRadius:"8px",
+                borderRadius: "8px",
               }}
             />
           </Box>
